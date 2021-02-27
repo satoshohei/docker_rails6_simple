@@ -1,0 +1,15 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: rails_user
+  password: rails_password
+  host: db
+
+development:
+  <<: *default
+  database: rails_db
+
+test:
+  <<: *default
+  database: rails_db
